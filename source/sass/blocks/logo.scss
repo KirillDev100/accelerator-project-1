@@ -1,0 +1,11 @@
+.logo {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 130px;
+  }
+}

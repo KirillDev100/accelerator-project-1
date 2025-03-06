@@ -1,0 +1,47 @@
+.main-header {
+  background-image: linear-gradient(to right, #1c3477 50%, #b4022a 50%, #b4022a 100%);
+  color: #ffffff;
+}
+
+.main-header__navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 64px;
+  background-image: $main-gradient;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
+  }
+}
+
+.main-header__phone {
+  font-family: $roboto;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: none;
+  color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+  }
+}
+
+.main-header__logo {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
