@@ -1,0 +1,70 @@
+.juri-slider {
+  display: flex;
+  position: relative;
+  width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+
+    &::before {
+      width: 35px;
+      height: 100%;
+      content: "";
+      display: block;
+      background-color: #ffffff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 4;
+    }
+
+    &::after {
+      width: 35px;
+      height: 100%;
+      content: "";
+      display: block;
+      background-color: #ffffff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      pointer-events: none;
+      z-index: 4;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+  }
+}
+
+.juri-slider:has(.juri-slider__item:hover),
+.juri-slider:has(.juri-slider__item:focus) {
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.juri-slider:has(.juri-slider__item:focus) {
+  box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+
+  @media (min-width: $tablet-width) {
+    box-shadow: none;
+  }
+}
+
+.juri-slider__list {
+  list-style-type: none;
+  width: 260px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+  }
+}

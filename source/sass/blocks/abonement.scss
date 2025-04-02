@@ -1,0 +1,208 @@
+.abonement {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 50px 42px;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    gap: 22px;
+    padding: 65px 53.5px;
+    width: 380px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    gap: 17px;
+    width: 360px;
+  }
+
+  &:hover,
+  &:has(.abonement__link:focus) {
+    position: relative;
+  }
+
+  &:hover::after,
+  &:has(.abonement__link:focus)::after {
+    pointer-events: none;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: 7px solid;
+    border-image-source: $border-gradient;
+    border-image-slice: 1;
+  }
+}
+
+.abonement__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+    width: 230px;
+  }
+}
+
+.abonement__details {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+  }
+}
+
+.abonement__price-back {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #e8e8e8;
+  display: block;
+  margin: 0;
+  opacity: 48%;
+  pointer-events: none;
+  user-select: none;
+  word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    font-size: 100px;
+  }
+}
+
+.abonement__price {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: $extra-accent;
+  margin: 0;
+  text-align: center;
+  margin-top: -90px;
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    width: 24px;
+    height: 33px;
+    content: "";
+    display: block;
+    z-index: 1;
+    position: relative;
+    background-image: url("/__spritemap#sprite-rubble-icon-view");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 42px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: -112px;
+    font-size: 60px;
+    column-gap: 14px;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -107px;
+    width: 230px;
+  }
+}
+
+.abonement__link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: $base-color;
+  box-sizing: border-box;
+  padding: 27px 49.5px;
+  width: 100%;
+  min-height: 66px;
+  outline: 2px solid $base-color;
+  outline-offset: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 27px 44px;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 27px 61.5px;
+    width: 230px;
+    margin-top: auto;
+  }
+}
+
+.abonement:hover .abonement__link {
+  background-image: $button-gradient;
+  outline: none;
+  color: #ffffff;
+}
+
+.abonement .abonement__link:focus {
+  outline: 2px solid #000000;
+  background-image: linear-gradient(97.05deg, rgba(237, 2, 51, 0.8) 17.6%, rgba(0, 62, 183, 0.8) 95.31%);
+  color: #ffffff;
+}
+
+.abonement .abonement__link:active {
+  background-image: $button-gradient;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.abonement .abonement__link[disabled] {
+  background-image: none;
+  color: rgba(16, 38, 84, 0.3);
+  outline: 2px solid $base-color;
+  opacity: 30%;
+  letter-spacing: 5%;
+  width: 100%;
+  padding: 27px 44.5px;
+  cursor: default;
+}

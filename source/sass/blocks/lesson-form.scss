@@ -1,0 +1,172 @@
+.lesson-form {
+  background-color: $base-color;
+  color: #ffffff;
+  padding: 70px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 103px;
+  }
+}
+
+.lesson-form__title {
+  margin: 0 auto;
+  margin-bottom: 36px;
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    line-height: 54px;
+    width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 477px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.lesson-form__form {
+  display: grid;
+  gap: 36px;
+  width: 290px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+    grid-template-columns: 1fr 1fr;
+    gap: 35.5px;
+    column-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 477px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.lesson-form__input {
+  font-family: $roboto;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: inset 0 -1px #74819c;
+  display: block;
+
+  &::placeholder {
+    color: inherit;
+    opacity: 40%;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -1px #ffffff;
+  }
+
+  &:focus {
+    padding: 7.5px 3px;
+    margin: -7.5px -3px;
+    margin-bottom: -2.5px;
+    box-shadow: none;
+    outline: 1px solid #ffffff;
+    outline-offset: -1px;
+  }
+
+  &:disabled {
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    padding-bottom: 4.5px;
+
+    &:focus {
+      margin: -10.5px -3px;
+      margin-bottom: -6px;
+      padding: 10.5px 3px;
+    }
+  }
+}
+
+.lesson-form__form .lesson-form__input--error {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  box-shadow: inset 0 -1px $error-color;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 4.5px;
+  }
+}
+
+.lesson-form__error-message {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  margin-top: 1.5px;
+  color: $error-color;
+}
+
+.lesson-form__button {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: none;
+  box-shadow: inset 0 0 0 2px #ffffff;
+  border: none;
+  width: 100%;
+  min-height: 60px;
+  box-sizing: border-box;
+  padding: 24px 56px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffffff;
+    color: $extra-accent;
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    box-shadow: inset 0 0 0 2px #000000;
+    color: $extra-accent;
+  }
+
+  &:active {
+    color: $base-color;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 2px #ffffff;
+  }
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 0 2px #ffffff;
+    opacity: 50%;
+    cursor: default;
+    background: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 27px 56px;
+    min-height: 66px;
+    grid-column: 1/3;
+  }
+}

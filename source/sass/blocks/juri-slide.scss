@@ -1,0 +1,145 @@
+.juri-slide {
+  position: relative;
+  max-width: 260px;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.juri-slide__image {
+  display: block;
+}
+
+.juri-slide__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 25px 41.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: auto;
+  overflow-x: visible;
+}
+
+.juri-slide:focus .juri-slide__content {
+  justify-content: flex-start;
+  background-color: rgba(16, 38, 84, 0.89);
+  padding: 45.92px;
+  padding-left: 42px;
+  padding-right: 41px;
+  box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+}
+
+.juri-slide:hover .juri-slide__content {
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    background-color: rgba(16, 38, 84, 0.89);
+    padding: 45.92px;
+    padding-left: 42px;
+    padding-right: 41px;
+    box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+  }
+}
+
+.juri-slide__title {
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0 auto;
+  width: max-content;
+  max-width: 100%;
+}
+
+.juri-slide:focus .juri-slide__title {
+  margin-bottom: 8.16px;
+}
+
+.juri-slide:hover .juri-slide__title {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 8.16px;
+  }
+}
+
+.juri-slide__category {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #b6bdcc;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 33.67px;
+  visibility: hidden;
+  position: absolute;
+  width: max-content;
+  max-width: 0;
+}
+
+.juri-slide:focus .juri-slide__category {
+  visibility: visible;
+  position: static;
+  max-width: 100%;
+}
+
+.juri-slide:hover .juri-slide__category {
+  @media (min-width: $desktop-width) {
+    visibility: visible;
+    position: static;
+    max-width: 100%;
+  }
+}
+
+.juri-slide__list {
+  width: 160px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  visibility: hidden;
+  position: absolute;
+}
+
+.juri-slide:focus .juri-slide__list {
+  visibility: visible;
+  position: static;
+}
+
+.juri-slide:hover .juri-slide__list {
+  @media (min-width: $desktop-width) {
+    visibility: visible;
+    position: static;
+  }
+}
+
+.juri-slide__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  gap: 10px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}

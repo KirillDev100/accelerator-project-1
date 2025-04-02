@@ -1,0 +1,86 @@
+.faq__tabs {
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq-tabs__button {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: $base-color;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-anchor: none;
+  padding: 15px 23px;
+  outline: 1px solid rgba($base-color, 0.2);
+  outline-offset: -1px;
+  cursor: pointer;
+
+  &:hover {
+    outline-color: $base-color;
+  }
+
+  &:active {
+    color: #ffffff;
+    outline: none;
+    background-image: $button-gradient;
+  }
+
+  &:focus-visible {
+    color: $base-color;
+    outline: 1px solid $base-color;
+    background-image: none;
+    background-color: #ffffff;
+  }
+
+  &:disabled {
+    color: #c8c9cc;
+    outline: 1px solid rgba(16, 38, 84, 0.2);
+    background: none;
+    cursor: default;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 18px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 21px 48px;
+    padding-bottom: 15px;
+    vertical-align: bottom;
+  }
+}
+
+.faq-tabs .faq-tabs__button--active {
+  color: #ffffff;
+  outline: none;
+  background-image: $button-gradient;
+
+  &:focus-visible {
+    color: $base-color;
+    outline: 1px solid $base-color;
+    background-image: none;
+    background-color: #ffffff;
+  }
+
+  &:disabled {
+    color: #c8c9cc;
+  }
+}

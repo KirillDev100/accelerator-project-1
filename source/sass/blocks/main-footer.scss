@@ -1,0 +1,32 @@
+.main-footer {
+  background-color: $dark-color;
+  color: #ffffff;
+}
+
+.main-footer__container {
+  padding: 40px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 103px;
+  }
+}
+
+.main-footer__logo {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+
+.main-footer__social {
+  margin: 0;
+}

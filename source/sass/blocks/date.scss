@@ -1,0 +1,53 @@
+.date__title {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #ffffff;
+  margin: 0;
+  margin-bottom: 2px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+  }
+}
+
+.date__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    gap: 5px;
+  }
+}
+
+.date__number {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #ffffff;
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
