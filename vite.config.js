@@ -64,6 +64,11 @@ export default {
   root: './source',
   build: {
     outDir: '../dist',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[ext]', // Имена без хэшей
+      },
+    },
   },
   base: './',
   server: {
