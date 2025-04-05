@@ -8,7 +8,7 @@
     "test": "backstop test --config=pp.config.cjs",
     "test-js": "backstop test --config=js.config.cjs",
     "test-content": "vitest content.test.ts --ui",
-    "build": "vite build --emptyOutDir",
+    "build": "vite build --emptyOutDir && node my-node-asset.js",
     "preview": "vite preview --open",
     "convert-rastr": "node convert-rastr.js",
     "w3c": "html-validator source --quiet",
